@@ -263,5 +263,14 @@ void VectorEditWidget::buildWidget()
     VectorEditItemLayout->addWidget(dsbZ, 2, 1, 1, 1);
 
     verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+    //Mucip Tab sırası için...
+    // Tab sırasını belirleme
+    QWidget::setTabOrder(leVectorDisplay, tbExpand);
+    QWidget::setTabOrder(tbExpand, dsbX);
+    QWidget::setTabOrder(dsbX, dsbY);
+    QWidget::setTabOrder(dsbY, dsbZ);
+
+
 }
 
